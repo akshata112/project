@@ -31,17 +31,17 @@
     <form class="row needs-validation" novalidate>
       <div class="col-12">
         <label class="form-label">First name</label>
-        <input type="text"  class="form-control" placeholder="First-name" aria-label="First-name">
+        <input type="text" maxlength="10" minlength="3" class="form-control" placeholder="First-name" aria-label="First-name" required/>
         <div class="invalid-feedback">
-          Please fill this field!
+          First-name must at least contain 3 letters!
         </div>
       </div>
       <hr class="space">
       <div class="col-12">
         <label class="form-label">Last name</label>
-        <input type="text" class="form-control" placeholder="Last-name" aria-label="Last-name">
+        <input type="text" class="form-control" placeholder="Last-name" aria-label="Last-name" >
         <div class="invalid-feedback">
-          Please fill this field!
+         Please fill this field!
         </div>
       </div>
       <hr class="space">

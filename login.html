@@ -16,8 +16,8 @@
 
 <body>
   <div class="top-contact1">
-      <h2 class="login">Login to your account to manage all the services and explore our tools!</h2>
-    </div>
+    <h2 class="login">Login to your account to manage all the services and explore our tools!</h2>
+  </div>
   <hr class="space">
 
   <div class="middle-contact">
@@ -32,7 +32,7 @@
       <hr class="space">
       <div class="col-12">
         <label class="form-label">Password</label>
-        <input type="text" minlength="3" class="form-control" placeholder="Password" required/>
+        <input type="text" minlength="3" class="form-control" placeholder="Password" required />
         <div class="invalid-feedback">
           Password must contain at least 3 characters!
         </div>
@@ -43,7 +43,18 @@
         <hr class="space">
       </div>
     </form>
-    <script src="script.js">
+    <script>
+      var forms = document.querySelectorAll(".needs-validation");
+
+      Array.prototype.slice.call(forms).forEach(function(form) {
+        form.addEventListener("submit", function(event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add("was-validated");
+        }, false);
+      });
     </script>
 
   </div>

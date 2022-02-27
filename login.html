@@ -21,7 +21,7 @@
   <hr class="space">
 
   <div class="middle-contact">
-    <form class="row needs-validation" novalidate>
+    <form action="menu.html" class="row needs-validation" novalidate>
       <div class="col-12">
         <label for="EmailAddressInput" class="form-label">Email address</label>
         <input type="email" class="form-control" id="EmailAddressInput" placeholder="name@example.com" required />
@@ -39,23 +39,26 @@
       </div>
       <hr class="space">
       <div class="col-12">
-        <button class="btn btn-danger" type="submit"><a href="menu.html">SUBMIT</a></button>
+        <button class="btn btn-danger" type="submit">SUBMIT</button>
         <hr class="space">
       </div>
     </form>
     <script>
-      var forms = document.querySelectorAll(".needs-validation");
+        var forms = document.querySelectorAll( ".needs-validation" );
 
-      Array.prototype.slice.call(forms).forEach(function(form) {
-        form.addEventListener("submit", function(event) {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add("was-validated");
-        }, false);
-      });
-    </script>
+        Array.prototype.slice.call( forms ).forEach( function( form )
+        {
+          form.addEventListener( "submit", function( event )
+         {
+           if( !form.checkValidity( ) )
+           {
+             event.preventDefault();
+             event.stopPropagation();
+           }
+           form.classList.add( "was-validated" );
+         }, false );
+       } );
+      </script>
 
   </div>
 

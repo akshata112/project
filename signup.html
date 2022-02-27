@@ -28,7 +28,7 @@
     <hr class="space">
     <h3>Sign up here and Enjoy delicious food at the safety of your home.</h3>
     <hr class="space">
-    <form class="row needs-validation" novalidate>
+    <form action="password.html" class="row needs-validation" novalidate>
       <div class="col-12">
         <label class="form-label">First name</label>
         <input type="text" maxlength="10" minlength="3" class="form-control" placeholder="First-name" aria-label="First-name" required />
@@ -54,38 +54,25 @@
       </div>
       <hr class="space">
       <div class="col-12">
-        <label class="form-label">Password</label>
-        <input type="text" minlength="3" class="form-control" placeholder="Password" required />
-        <div class="invalid-feedback">
-          Password must contain at least 3 characters!
-        </div>
-      </div>
-      <hr class="space">
-      <div class="col-12">
-        <label class="form-label">Confirm Password</label>
-        <input type="text" minlength="3" class="form-control" placeholder="Confirm-Password" required />
-        <div class="invalid-feedback">
-          Password must contain at least 3 characters!
-        </div>
-      </div>
-      <hr class="space">
-      <div class="col-12">
-        <button class="btn btn-danger" type="submit"><a href="menu.html">SUBMIT</a></button>
+        <button class="btn btn-danger" type="submit">SUBMIT</button>
         <hr class="space">
       </div>
     </form>
     <script>
-      var forms = document.querySelectorAll(".needs-validation");
+    var forms = document.querySelectorAll( ".needs-validation" );
 
-      Array.prototype.slice.call(forms).forEach(function(form) {
-        form.addEventListener("submit", function(event) {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add("was-validated");
-        }, false);
-      });
+    Array.prototype.slice.call( forms ).forEach( function( form )
+    {
+      form.addEventListener( "submit", function( event )
+     {
+       if( !form.checkValidity( ) )
+       {
+         event.preventDefault();
+         event.stopPropagation();
+       }
+       form.classList.add( "was-validated" );
+     }, false );
+   } );
     </script>
 
   </div>
